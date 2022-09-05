@@ -37,7 +37,7 @@ function SideBar({ showSideBar }) {
     return (
         <div className={`transition all bg-primary h-screen flex flex-col overflow-hidden ${showSideBar ? 'w-48' : 'w-0'}`}>
             <div>
-                <h1 className='text-2xl font-bold mt-4 ml-7 text-gray-400'>SHREYNEWS</h1>
+                <h1 className='text-2xl font-bold mt-4 ml-7 text-gray-400'>SHEYNEWS</h1>
             </div>
             <div className='flex flex-col mt-20 pl-10'>
                 {menuItems.map((item) => {
