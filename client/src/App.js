@@ -31,7 +31,7 @@ export default App;
 
 export const ProtectedRoute=({children})=>{
 
-  if(localStorage.getItem('sheynews-user')){
+  if(localStorage.getItem('sharenews-user')){
         return children
   }else{
       return <Navigate to='/' />

@@ -16,7 +16,7 @@ function AddNews(){
       const [description, setDescription] = useState("");
       const [loading, setLoading] = useState(false);
 
-      const user=JSON.parse(localStorage.getItem('sheynews-user'))
+      const user=JSON.parse(localStorage.getItem('sharenews-user'))
       console.log(user)
       useEffect(() => {
         console.log(convertToRaw(editorState.getCurrentContent()));

@@ -14,7 +14,7 @@ function EditNews() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [loading, setLoading] = useState(false);
-  const user = JSON.parse(localStorage.getItem("sheynews-user"));
+  const user = JSON.parse(localStorage.getItem("sharenews-user"));
   const params = useParams();
 
   const navigate = useNavigate();

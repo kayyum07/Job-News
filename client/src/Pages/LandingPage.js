@@ -21,7 +21,7 @@ function LandingPage() {
       const result = await axios.post("/api/users/login", payload);
       console.log(result.data);
       alert("Login Successfull");
-      localStorage.setItem("sheynews-user", JSON.stringify(result.data));
+      localStorage.setItem("sharenews-user", JSON.stringify(result.data));
       navigate("/home");
       setLoading(false);
     } catch (error) {
@@ -53,7 +53,7 @@ function LandingPage() {
   };
 
   useEffect(()=>{
-    if(localStorage.getItem('sheynews-user'))
+    if(localStorage.getItem('sharenews-user'))
     navigate('/home')
   },[])
   return (
@@ -61,14 +61,11 @@ function LandingPage() {
       {loading && <Spinner />}
       <div className={`w-1/2 px-10 space-y-5 sm:w-screen ${(showLoginForm || showRegisterForm) && 'sm:hidden'}`}>
         <h1>
-          <b className="text-[#2B8F74] text-8xl">SHEY</b>{" "}
+          <b className="text-[#2B8F74] text-8xl">SHARE</b>{" "}
           <b className="text-8xl text-gray-700">NEWS</b>
         </h1>
         <p className="text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quia
-          voluptates tempore odit dolorem fugit beatae architecto aliquid error
-          enim, accusantium autem ipsa ducimus reprehenderit ad itaque
-          consequatur fuga quidem!
+       News sharing platform for non disturb usefull information
         </p>
         <div className="space-x-5">
           <button

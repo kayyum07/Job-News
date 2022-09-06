@@ -9,7 +9,7 @@ function PostedNewsItems() {
   const [loading, setLoading] = useState(false);
   const [newsItems, setNewsItems] = useState([]);
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem("sheynews-user"));
+  const user = JSON.parse(localStorage.getItem("sharenews-user"));
   const getData = async () => {
     setLoading(true);
     try {
