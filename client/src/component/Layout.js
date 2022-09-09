@@ -3,7 +3,6 @@ import SideBar from './SideBar'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import {BiUserCircle} from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
-import Profile from '../Pages/Profile';
 
 function Layout(props) {
     const [showSideBar, setShowSideBar] = useState(true);
