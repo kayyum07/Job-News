@@ -59,7 +59,7 @@ function EditNews() {
   };
   useEffect(() => {
     getData();
-  }, []);
+  });
   return (
     <Layout>
       {loading && <Spinner />}
