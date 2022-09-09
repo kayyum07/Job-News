@@ -23,7 +23,7 @@ function NewsDesc() {
       };
       useEffect(() => {
         getData();
-      }, []);
+      });
     const params = useParams()
     return (
       <Layout>
