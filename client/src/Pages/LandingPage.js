@@ -55,7 +55,7 @@ function LandingPage() {
   useEffect(()=>{
     if(localStorage.getItem('sharenews-user'))
     navigate('/home')
-  },[])
+  })
   return (
     <div className="h-screen flex items-center sm:flex-col">
       {loading && <Spinner />}
