@@ -25,7 +25,7 @@ function PostedNewsItems() {
   };
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   const deleteItem = async (newsid) => {
     setLoading(true);
