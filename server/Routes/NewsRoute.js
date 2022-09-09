@@ -1,5 +1,5 @@
 const express = require('express')
-const NewsItemModel = require('../models/NewsItem')
+const NewsItemModel = require('../Models/NewsItem')
 const router = express.Router()
 
 
