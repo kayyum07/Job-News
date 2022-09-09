@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import {Routes, Route, BrowserRouter, useNavigate, Navigate} from 'react-router-dom';
+import {Routes, Route, BrowserRouter, Navigate} from 'react-router-dom';
 import HomePage  from './Pages/HomePage';
 import AddNews from './Pages/AddNews';
 import NewsDesc from './Pages/NewsDesc';
@@ -9,7 +8,6 @@ import PostedNewsItems from './Pages/PostedNewsItems';
 import EditNews from './Pages/EditNews';
 
 function App() {
-  // const navigate= useNavigate();
   return (
     <div className="App">
        <BrowserRouter>
@@ -27,7 +25,6 @@ function App() {
 }
 
 export default App;
-
 
 export const ProtectedRoute=({children})=>{
 
