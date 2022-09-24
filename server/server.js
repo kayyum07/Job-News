@@ -1,13 +1,17 @@
 const express = require('express');
-const dbConnect=require('./dbConnect');
+const dbConnect = require('./dbConnect');
 const newsRoute = require('./Routes/NewsRoute');
 const userRoute = require('./Routes/UserRoute');
-const app=  express();
-app.use(express.json());
-const port=process.env.PORT || 5000;
+const path = require('path');
+const cors = require('cors');
 
-const path = require('path')
-if(process.env.NODE_ENV==='production'){
+const port = process.env.PORT || 5000;
+const app =  express();
+
+app.use(cors());
+app.use(express.json());
+
+if (process.env.NODE_ENV==='production') {
     app.use('/',express.static('../client/build'))
 
 //     app.get('*',(req,res)=>{
