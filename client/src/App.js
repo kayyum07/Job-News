@@ -6,6 +6,7 @@ import NewsDesc from './Pages/NewsDesc';
 import LandingPage from './Pages/LandingPage';
 import PostedNewsItems from './Pages/PostedNewsItems';
 import EditNews from './Pages/EditNews';
+import Profile from './Pages/Profile';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/edit/:newsid' element={<ProtectedRoute><EditNews/></ProtectedRoute>} />
             <Route path='/posted' element={<ProtectedRoute><PostedNewsItems /></ProtectedRoute>} />
             <Route path='/newsdesc/:newsid' element={<ProtectedRoute><NewsDesc/></ProtectedRoute>} />
+            <Route path='/profile' element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
           </Routes>
        </BrowserRouter>
     </div>

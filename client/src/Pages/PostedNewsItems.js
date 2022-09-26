@@ -25,7 +25,8 @@ function PostedNewsItems() {
   };
   useEffect(() => {
     getData();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[user._id]);
 
   const deleteItem = async (newsid) => {
     setLoading(true);

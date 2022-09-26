@@ -42,24 +42,25 @@ function EditNews() {
     }
   };
 
-  const getData = async () => {
-    setLoading(true);
-    try {
-      const result = await axios.post("/api/newsitems/getnewsitembyid", {
-        newsid: params.newsid,
-      });
-      setTitle(result.data.title)
-      setDescription(result.data.description)
-      setEditorState(()=>EditorState.createWithContent(convertFromRaw(JSON.parse(result.data.content))))
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-  };
+  
   useEffect(() => {
+    const getData = async () => {
+      setLoading(true);
+      try {
+        const result = await axios.post("/api/newsitems/getnewsitembyid", {
+          newsid: params.newsid,
+        });
+        setTitle(result.data.title)
+        setDescription(result.data.description)
+        setEditorState(()=>EditorState.createWithContent(convertFromRaw(JSON.parse(result.data.content))))
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
+    };
     getData();
-  });
+  },[params.newsid]);
   return (
     <Layout>
       {loading && <Spinner />}
